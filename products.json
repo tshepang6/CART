@@ -1,0 +1,55 @@
+[{
+    "id" : 1,
+    "name": "Air Jordan 1",
+    "price": 200,
+    "image":"jay.png"
+},
+
+{
+    "id" : 2,
+    "name": "Air Jordan 6",
+    "price": 900,
+    "image":"jay5.png"
+},
+
+{
+    "id" : 3,
+    "name": "Air Jordan retro",
+    "price": 200,
+    "image":"jay.png"
+},
+
+{
+    "id" : 4,
+    "name": "Air Jordan metro",
+    "price": 200,
+    "image":"jay5.png"
+},
+{
+    "id" : 5,
+    "name": "Air Jordan 1 future",
+    "price": 200,
+    "image":"jay.png"
+},
+
+{
+    "id" : 6,
+    "name": "Air Jordan past",
+    "price": 900,
+    "image":"jay5.png"
+},
+
+{
+    "id" : 7,
+    "name": "Air Jordan red",
+    "price": 200,
+    "image":"jay.png"
+},
+
+{
+    "id" : 8,
+    "name": "Air Jordan black",
+    "price": 200,
+    "image":"jay5.png"
+}
+]

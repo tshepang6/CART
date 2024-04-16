@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+.logo img {
+    height: 100px;
+    width: auto;
+}
+header .logo{
+    position: relative;
+    max-width: 80px;
+}
+header ul{
+    position: relative;
+    display: flex;
+}
+header ul li{
+    list-style: none;
+}
+header ul li a{
+    display: inline-block;
+    color: #333;
+    font-weight: 400;
+    margin-left: 50px;
+    text-decoration: none;
+}
+
+.container{
+    width: 900px;
+    max-width: 90vw;
+    margin: auto;
+    text-align: center;
+    padding-top: 10px;
+    transition: transform .5s;
+}
+
+svg{
+    width: 30px;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0px;
+}
+
+header .icon-cart {
+    position: relative;
+}
+
+header .icon-cart span {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: -20px;
+}
+
+.listProduct .item img{
+    width: 90%;
+    filter: drop-shadow(0 50px 20px #0009);
+}
+
+.listProduct {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust the column width */
+    gap: 20px; /* Add gap between items */
+    justify-items: center; /* Center items horizontally */
+    align-items: stretch; /* Stretch items vertically */
+}
+
+.listProduct .item {
+    display: flex; /* Use flexbox for item layout */
+    flex-direction: column; /* Arrange children vertically */
+    align-items: center; /* Center content horizontally */
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center; /* Center text */
+}
+
+
+.listProduct .item h2{
+    font-weight: 500;
+    font-size: medium;
+}
+
+.listProduct .item .price{
+    letter-spacing: 5px;
+    font-size: small;
+}
+
+.listProduct .item button{
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-radius: 20px;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.cartTab{
+    width: 400px;
+    background-color: #353432;
+    color: white;
+    position: fixed;
+    /* top: 0;
+    right: 0;
+    bottom: 0;  */
+    inset: 0 -400px 0 auto;
+    display: grid;
+    grid-template-rows: 70px 1fr 70px;
+    transition: .5s;
+}
+
+body.showCart .cartTab{
+    inset: 0 0 0 auto;
+}
+body.showCart .container{
+    transform: translateX(-250px);
+}
+
+.cartTab h1{
+    padding: 20px;
+    margin: 0;
+    font-weight: 300;
+}
+
+
+.cartTab .btn{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.cartTab .btn button{
+    background-color: orange;
+    border: none;
+    font-family: sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.cartTab .btn .close{
+    background-color: tan;
+}
+
+.cartTab .listCart .item img{
+    width: 100%;
+}
+
+.cartTab .listCart .item{
+    display: grid;
+    grid-template-columns: 70px 150px 50px 1fr;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+.listCart .quantity span{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    color: #555;
+    border-radius: 50%;
+    cursor: pointer;
+} 
+
+.listCart .quantity span:nth-child(2) {
+    background-color: transparent;
+    color: white;
+}
+
+.listCart .item:nth-child(even){
+    background-color: #eee1;
+}
+
+.listCart{
+    overflow: auto;
+}
+
+.listCart::-webkit-scrollbar{
+    width: 0;
+}
+
+
+/* Common styles for all screen sizes */
+/* For example, styles for desktop screens */
+
+/* Tablet screen styles */
+@media screen and (max-width: 1024px) {
+    /* Styles specific to tablets */
+    /* Adjust layout, font sizes, margins, etc. */
+    body {
+        font-size: 16px; /* Adjust font size for better readability on tablets */
+    }
+
+    .container {
+        width: 90%; /* Adjust width for tablets */
+        margin: 0 auto; /* Center align container */
+    }
+
+    /* Example of hiding certain elements on tablets */
+    .hide-on-tablet {
+        display: none;
+    }
+
+    /* Example of adjusting column layout for tablets */
+    .column {
+        width: 50%; /* Display two columns per row on tablets */
+    }
+}
+
+/* Mobile screen styles */
+@media screen and (max-width: 992px) {
+    /* Styles specific to mobile screens */
+    /* Adjust layout, font sizes, margins, etc. */
+    .listProduct{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px){
+        .listProduct{
+            grid-template-columns: (2, 1fr);
+        }
+}
